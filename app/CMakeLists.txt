@@ -8,13 +8,11 @@ set(pathToNative ${pathToProject}/transcode-1.1.7)
 
 # 配置加载native依赖
 include_directories(${pathToNative})
-
 # 添加待编译的文件
-add_library(WAVPlayer SHARED ${pathToNative}/avilib/wavlib.c
-                                ${pathToNative}/avilib/platform_posix.c
-                                ${pathToProject}/app/src/main/cpp/io_weichao_wav_1player_MainActivity.h
-                                ${pathToProject}/app/src/main/cpp/io_weichao_wav_1player_MainActivity_PlayTask.h
-                                ${pathToProject}/app/src/main/cpp/WAVPlayer.cpp)
+add_library(WAV_Player SHARED ${pathToNative}/avilib/wavlib.c
+                              ${pathToNative}/avilib/platform_posix.c
+                              ${pathToProject}/app/src/main/cpp/io_weichao_wav_1player_MainActivity.h
+                              ${pathToProject}/app/src/main/cpp/WAV_Player.cpp)
 
-target_link_libraries(WAVPlayer
-                        OpenSLES)
+target_link_libraries(WAV_Player
+                      OpenSLES)

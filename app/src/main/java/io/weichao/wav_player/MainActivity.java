@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     static {
-        System.loadLibrary("WAVPlayer");
+        System.loadLibrary("WAV_Player");
     }
 
     private native void play(String fileName) throws IOException;
